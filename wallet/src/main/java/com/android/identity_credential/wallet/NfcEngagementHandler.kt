@@ -19,6 +19,7 @@ package com.android.identity_credential.wallet
 import android.content.Context
 import android.content.pm.PackageManager
 import android.nfc.cardemulation.HostApduService
+import android.nfc.cardemulation.PollingFrame
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -122,6 +123,9 @@ class NfcEngagementHandler : HostApduService() {
             }
             engagementHelper = builder.build()
         }
+    }
+
+    override fun processPollingFrames (frames: List<PollingFrame> ) {
     }
 
     override fun processCommandApdu(commandApdu: ByteArray, extras: Bundle?): ByteArray? {

@@ -23,7 +23,7 @@ kotlin {
 
 android {
     namespace = "com.android.identity_credential.wallet"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.android.identity_credential.wallet"
